@@ -1,5 +1,5 @@
 {
-  "name": "emoji-prefix-commit",
+  "name": "@syakoo/emoji-prefix-commit",
   "version": "0.0.0",
   "description": "Add emoji prefix to commit message",
   "author": "syakoo",
