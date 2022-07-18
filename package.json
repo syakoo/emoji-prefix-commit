@@ -1,0 +1,27 @@
+{
+  "name": "emoji-prefix-commit",
+  "version": "0.0.0",
+  "description": "Add emoji prefix to commit message",
+  "author": "syakoo",
+  "license": "MIT",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "prepare": "npx simple-git-hooks"
+  },
+  "files": [
+    "src",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "bin": {
+    "emoji-prefix-commit": "src/index.js"
+  },
+  "devDependencies": {
+    "simple-git-hooks": "^2.8.0"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "node src/index.js"
+  }
+}
