@@ -21,7 +21,9 @@ export function addEmojiCommitPrefix(commitMessageFilePath) {
   const messagePrefix = message.split(":")[0];
 
   if (messagePrefix) {
-    const emoji = prefix2Emojis[messagePrefix.toLowerCase()];
+    const emoji = Object.entries(prefix2Emojis).find(([prefix]) => {
+      return messagePrefix.toLowerCase().startsWith(prefix);
+    })?.[1]
 
     if (emoji) {
       fs.writeFileSync(commitMessageFilePath, `${emoji} ${message}`, "utf-8");
